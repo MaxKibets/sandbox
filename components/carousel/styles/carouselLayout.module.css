@@ -1,0 +1,78 @@
+.carousel {
+  height: 400px;
+  position: relative;
+}
+
+.list {
+  position: relative;
+  list-style: none;
+}
+  
+.list, .item {
+  height: 100%;
+  width: 100%;
+}
+
+.item {
+  position: absolute;
+  transform: translateX(50%);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.item.prev {
+  transform: translateX(-50%);
+}
+
+.item.active {
+  transform: translateX(0) !important;
+  opacity: 1;
+  z-index: 100;
+}
+
+.item img {
+  display: block;
+  object-fit: contain;
+}
+
+.buttonLeft,
+.buttonRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+}
+
+.buttonLeft:hover,
+.buttonRight:hover {
+  opacity: 1;
+}
+
+.buttonLeft {
+  left: 0;
+}
+
+.buttonRight {
+  right: 0;
+}
+
+.iconLeft, .iconRight {
+  border: solid var(--foreground);
+  border-width: 0 0.3rem 0.3rem 0;
+  display: inline-block;
+  padding: 0.6rem;
+}
+
+.iconLeft {
+  transform: translateX(0.6rem) rotate(135deg);
+}
+
+.iconRight {
+  transform:  translateX(-0.6rem) rotate(-45deg);
+}

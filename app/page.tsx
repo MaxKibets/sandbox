@@ -1,95 +1,38 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+
+import Carousel from "@/components/carousel";
+
+import image1 from "@/public/1.jpg";
+import image2 from "@/public/2.jpg";
+import image3 from "@/public/3.jpg";
+import image4 from "@/public/4.jpg";
+import image5 from "@/public/5.jpg";
+
+// const mockData = {
+//   title: "Lorem ipsum",
+//   description:
+//     "Deleniti debitis consequuntur pariatur. Esse aut itaque necessitatibus porro perferendis dignissimos? Aperiam porro quos labore recusandae voluptate voluptatem molestias dolore fugit omnis.",
+// };
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <Carousel>
+        <Image src={image1} alt="Image 1" fill />
+        <Image src={image2} alt="Image 2" fill />
+        <Image src={image3} alt="Image 3" fill />
+        <Image src={image4} alt="Image 4" fill />
+        <Image src={image5} alt="Image 5" fill />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* {Array(3)
+          .fill(mockData)
+          .map(({ title, description }, index) => (
+            <div key={index}>
+              <h1>{`${title} ${index}`}</h1>
+              <p>{description}</p>
+            </div>
+          ))} */}
+      </Carousel>
     </div>
   );
 }
