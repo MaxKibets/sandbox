@@ -19,7 +19,7 @@ export default function Home() {
         <Image src={image4} alt="Image 4" fill />
         <Image src={image5} alt="Image 5" fill />
       </Carousel>
-      <AnimatedFrame>
+      <AnimatedFrame direction="right">
         <Image src={image5} alt="Image 5" width={500} height={500} />
       </AnimatedFrame>
       <Image src={image4} alt="Image 4" width={500} height={500} />

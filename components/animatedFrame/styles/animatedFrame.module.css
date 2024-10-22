@@ -1,9 +1,32 @@
 .wrap {
   overflow: hidden;
+  display: inline-block;
+}
+
+.wrap img {
+  display: block;
+}
+
+.left {
+  opacity: 0;
+  transform: translateX(-100%);
+} 
+
+.right {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.top {
+  transform: translateY(-100%);
+}
+
+.bottom {
+  transform: translateY(100%);
 }
 
 .hidden, .visible {
-  transition: all 0.5s ease; 
+  transition: all 0.3s ease; 
 }
 
 .visible {
@@ -13,5 +36,11 @@
 
 .hidden {
   opacity: 0;
-  transform: translateX(-100%);
+}
+
+.visible.top,
+.visible.bottom,
+.visible.left,
+.visible.right {
+  transform: translateY(0);
 }

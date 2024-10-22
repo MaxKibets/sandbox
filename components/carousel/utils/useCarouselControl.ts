@@ -29,6 +29,7 @@ const useCarouselControl = ({
   // Next/Prev handlers
   const handleShowNext = () =>
     setCurrentIndex((prevIndex) => (prevIndex + 1) % itemsCount);
+
   const handleShowPrev = () =>
     setCurrentIndex((prevIndex) => (prevIndex - 1 + itemsCount) % itemsCount);
 
@@ -36,6 +37,7 @@ const useCarouselControl = ({
   const handleStop = () => {
     if (intervalId.current) clearInterval(intervalId.current);
   };
+
   const handleRun = () => {
     if (interval) {
       intervalId.current = setInterval(() => handleShowNext(), interval);
@@ -64,7 +66,7 @@ const useCarouselControl = ({
         handleShowPrev();
       }
 
-      touchStartX.current = null; // Reset touch start position
+      touchStartX.current = null;
     }
   };
 
