@@ -13,16 +13,24 @@ type CarouselProps = {
 };
 
 const Carousel: React.FC<CarouselProps> = ({ children, interval, ...props }) => {
-  const { currentIndex, prevIndex, showNext, showPrev, stopCarousel, runCarousel } =
-    useCarouselControl({
-      itemsCount: Children.count(children),
-      interval,
-    });
+  const {
+    currentIndex,
+    prevIndex,
+    nextIndex,
+    showNext,
+    showPrev,
+    stopCarousel,
+    runCarousel,
+  } = useCarouselControl({
+    itemsCount: Children.count(children),
+    interval,
+  });
 
   return (
     <CarouselLayout
       currentIndex={currentIndex}
       prevIndex={prevIndex}
+      nextIndex={nextIndex}
       onMouseEnter={stopCarousel}
       onMouseLeave={runCarousel}
       onNextClick={showNext}

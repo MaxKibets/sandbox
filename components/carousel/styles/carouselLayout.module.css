@@ -1,5 +1,5 @@
 .carousel {
-  height: 400px;
+  height: 900px;
   position: relative;
 }
 
@@ -15,8 +15,7 @@
 
 .item {
   position: absolute;
-  transform: translateX(50%);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   opacity: 0;
 }
 
@@ -24,7 +23,11 @@
   transform: translateX(-50%);
 }
 
-.item.active {
+.item.next {
+  transform: translateX(50%);
+}
+
+.item.current {
   transform: translateX(0) !important;
   opacity: 1;
   z-index: 100;
@@ -46,7 +49,7 @@
   cursor: pointer;
   z-index: 100;
   opacity: 0.3;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .buttonLeft:hover,

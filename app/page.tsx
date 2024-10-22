@@ -7,12 +7,7 @@ import image2 from "@/public/2.jpg";
 import image3 from "@/public/3.jpg";
 import image4 from "@/public/4.jpg";
 import image5 from "@/public/5.jpg";
-
-// const mockData = {
-//   title: "Lorem ipsum",
-//   description:
-//     "Deleniti debitis consequuntur pariatur. Esse aut itaque necessitatibus porro perferendis dignissimos? Aperiam porro quos labore recusandae voluptate voluptatem molestias dolore fugit omnis.",
-// };
+import AnimatedFrame from "@/components/animatedFrame/containers/AnimatedFrame";
 
 export default function Home() {
   return (
@@ -23,16 +18,11 @@ export default function Home() {
         <Image src={image3} alt="Image 3" fill />
         <Image src={image4} alt="Image 4" fill />
         <Image src={image5} alt="Image 5" fill />
-
-        {/* {Array(3)
-          .fill(mockData)
-          .map(({ title, description }, index) => (
-            <div key={index}>
-              <h1>{`${title} ${index}`}</h1>
-              <p>{description}</p>
-            </div>
-          ))} */}
       </Carousel>
+      <AnimatedFrame>
+        <Image src={image5} alt="Image 5" width={500} height={500} />
+      </AnimatedFrame>
+      <Image src={image4} alt="Image 4" width={500} height={500} />
     </div>
   );
 }

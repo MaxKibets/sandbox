@@ -8,6 +8,7 @@ type useCarouselControlProps = {
 type useCarouselControlReturn = {
   currentIndex: number;
   prevIndex: number;
+  nextIndex: number;
   showNext: () => void;
   showPrev: () => void;
   stopCarousel: () => void;
@@ -45,6 +46,7 @@ const useCarouselControl = ({
   return {
     currentIndex,
     prevIndex: currentIndex - 1 === -1 ? itemsCount - 1 : currentIndex - 1,
+    nextIndex: currentIndex + 1 === itemsCount ? 0 : currentIndex + 1,
     showNext,
     showPrev,
     stopCarousel,

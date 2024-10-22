@@ -6,6 +6,7 @@ type CarouselLayoutProps = {
   children: React.ReactNode;
   currentIndex: number;
   prevIndex: number;
+  nextIndex: number;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
   onPrevClick: () => void;
@@ -18,6 +19,7 @@ const CarouselLayout: React.FC<CarouselLayoutProps> = ({
   children,
   currentIndex,
   prevIndex,
+  nextIndex,
   onMouseEnter,
   onMouseLeave,
   onPrevClick,
@@ -30,7 +32,12 @@ const CarouselLayout: React.FC<CarouselLayoutProps> = ({
       <ul className={css.list}>
         {Children.map(children, (child, index) => (
           <li
-            className={`${css.item} ${currentIndex === index ? css.active : ""} ${prevIndex === index ? css.prev : ""}`}
+            className={`
+              ${css.item}
+              ${currentIndex === index ? css.current : ""} 
+              ${prevIndex === index ? css.prev : ""}
+              ${nextIndex === index ? css.next : ""} 
+            `}
             key={index}
           >
             {child}
