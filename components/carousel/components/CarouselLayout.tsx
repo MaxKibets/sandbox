@@ -11,6 +11,9 @@ type CarouselLayoutProps = {
   onMouseLeave: () => void;
   onPrevClick: () => void;
   onNextClick: () => void;
+  onTouchStart: React.TouchEventHandler<HTMLDivElement>;
+  onTouchEnd: React.TouchEventHandler<HTMLDivElement>;
+  onTouchMove: React.TouchEventHandler<HTMLDivElement>;
   iconPrev?: React.ReactNode | string;
   iconNext?: React.ReactNode | string;
 };
@@ -24,11 +27,21 @@ const CarouselLayout: React.FC<CarouselLayoutProps> = ({
   onMouseLeave,
   onPrevClick,
   onNextClick,
+  onTouchStart,
+  onTouchEnd,
+  onTouchMove,
   iconPrev,
   iconNext,
 }) => {
   return (
-    <div className={css.carousel} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <div
+      className={css.carousel}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+      onTouchMove={onTouchMove}
+    >
       <ul className={css.list}>
         {Children.map(children, (child, index) => (
           <li
