@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import MainNavBar from "@/components/MainNavBar";
 
 import "../styles/globals.css";
-import Layout from "@/components/ui/Layout";
 
 export const metadata: Metadata = {
   title: "Sandbox",
@@ -18,10 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Layout>
-          <MainNavBar />
-          {children}
-        </Layout>
+        <div className="layout">
+          <nav className="mainNavBar">
+            <MainNavBar />
+          </nav>
+          <main className="content">{children}</main>
+        </div>
       </body>
     </html>
   );
