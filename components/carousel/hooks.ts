@@ -1,24 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import { useCarouselControlProps, useCarouselControlReturn } from "./types";
 
-type useCarouselControlProps = {
-  itemsCount: number;
-  interval?: number;
-};
-
-type useCarouselControlReturn = {
-  currentIndex: number;
-  prevIndex: number;
-  nextIndex: number;
-  handleShowNext: () => void;
-  handleShowPrev: () => void;
-  handleRun: () => void;
-  handleStop: () => void;
-  handleTouchStart: React.TouchEventHandler<HTMLDivElement>;
-  handleTouchEnd: React.TouchEventHandler<HTMLDivElement>;
-  handleTouchMove: React.TouchEventHandler<HTMLDivElement>;
-};
-
-const useCarouselControl = ({
+export const useCarouselControl = ({
   itemsCount,
   interval,
 }: useCarouselControlProps): useCarouselControlReturn => {
@@ -89,5 +72,3 @@ const useCarouselControl = ({
     handleTouchMove,
   };
 };
-
-export default useCarouselControl;

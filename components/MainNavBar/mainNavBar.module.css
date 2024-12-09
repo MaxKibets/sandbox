@@ -1,0 +1,21 @@
+.navBar {
+  height: 100%;
+  background: var(--background);
+  padding: 1rem .5rem;
+  border-right: 1px solid var(--background-light);
+  box-shadow: var(--box-shadow);
+}
+
+.link {
+  display: block;
+  padding: .5rem .75rem;
+  text-transform: uppercase;
+  font-size: .75rem;
+  transition: all var(--transition);
+}
+
+.link:hover,
+.link.active {
+  background: var(--background-light);
+  border-radius: var(--radius);
+}

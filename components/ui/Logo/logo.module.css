@@ -1,0 +1,12 @@
+.logo {
+  padding: .5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  transition: all var(--transition);
+}
+
+.logo:hover {
+  color: var(--foreground-light)
+}

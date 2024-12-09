@@ -2,14 +2,9 @@
 
 import React, { useRef } from "react";
 
-import useInView from "../utils/useInView";
-import AnimatedFrameLayout, {
-  AnimationDirectionProps,
-} from "../components/AnimatedFrameLayout";
-
-type AnimatedFrameProps = {
-  children: React.ReactNode;
-} & AnimationDirectionProps;
+import useInView from "./hooks";
+import AnimatedFrameLayout from "./AnimatedFrameLayout";
+import { AnimatedFrameProps } from "./types";
 
 const AnimatedFrame: React.FC<AnimatedFrameProps> = ({ children, direction }) => {
   const ref = useRef(null);

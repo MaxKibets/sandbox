@@ -1,6 +1,7 @@
 .carousel {
   height: 400px;
   position: relative;
+  overflow: hidden;
 }
 
 .list {
@@ -48,7 +49,7 @@
   border: none;
   cursor: pointer;
   z-index: 100;
-  opacity: 0.3;
+  opacity: var(--opacity);
   transition: all 0.3s ease;
 }
 
@@ -66,7 +67,7 @@
 }
 
 .iconLeft, .iconRight {
-  border: solid var(--foreground);
+  border: solid var(--foreground-light);
   border-width: 0 0.3rem 0.3rem 0;
   display: inline-block;
   padding: 0.6rem;

@@ -2,15 +2,9 @@
 
 import React, { Children } from "react";
 
-import useCarouselControl from "../utils/useCarouselControl";
-import CarouselLayout from "../components/CarouselLayout";
-
-type CarouselProps = {
-  children: React.ReactNode;
-  interval?: number;
-  iconPrev?: React.ReactNode | string;
-  iconNext?: React.ReactNode | string;
-};
+import { useCarouselControl } from "./hooks";
+import CarouselLayout from "./CarouselLayout";
+import { CarouselProps } from "./types";
 
 const Carousel: React.FC<CarouselProps> = ({ children, interval, ...props }) => {
   const {

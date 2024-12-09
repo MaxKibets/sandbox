@@ -1,22 +1,8 @@
 import React, { Children } from "react";
+import clsx from "clsx";
 
-import css from "../styles/carouselLayout.module.css";
-
-type CarouselLayoutProps = {
-  children: React.ReactNode;
-  currentIndex: number;
-  prevIndex: number;
-  nextIndex: number;
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
-  onPrevClick: () => void;
-  onNextClick: () => void;
-  onTouchStart: React.TouchEventHandler<HTMLDivElement>;
-  onTouchEnd: React.TouchEventHandler<HTMLDivElement>;
-  onTouchMove: React.TouchEventHandler<HTMLDivElement>;
-  iconPrev?: React.ReactNode | string;
-  iconNext?: React.ReactNode | string;
-};
+import css from "./carousel.module.css";
+import { CarouselLayoutProps } from "./types";
 
 const CarouselLayout: React.FC<CarouselLayoutProps> = ({
   children,
@@ -45,12 +31,11 @@ const CarouselLayout: React.FC<CarouselLayoutProps> = ({
       <ul className={css.list}>
         {Children.map(children, (child, index) => (
           <li
-            className={`
-              ${css.item}
-              ${currentIndex === index ? css.current : ""} 
-              ${prevIndex === index ? css.prev : ""}
-              ${nextIndex === index ? css.next : ""} 
-            `}
+            className={clsx(css.item, {
+              [css.current]: currentIndex === index,
+              [css.prev]: prevIndex === index,
+              [css.next]: nextIndex === index,
+            })}
             key={index}
           >
             {child}

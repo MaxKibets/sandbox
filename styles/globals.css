@@ -1,0 +1,60 @@
+:root {
+  --transition: 0.2s;
+  --radius: 0.25rem;
+  --opacity: 0.2;
+  
+  --white: 255, 255, 255;
+  --black: 23, 23, 23;
+  
+  --background: rgb(var(--white));
+  --background-light: rgba(var(--black), var(--opacity));
+  --foreground: rgba(var(--black), .8);
+  
+  --box-shadow: 0 0 10px #0c0c0c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgb(var(--black));
+    --background-light: rgba(var(--white), var(--opacity));
+    --foreground: rgba(var(--white), .8);
+    --foreground-light: rgb(var(--white));
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: .875rem;
+  line-height: 1.25rem;
+
+  background-color: var(--background);
+  background-image: radial-gradient(var(--background-light) .5px, var(--background) .5px);
+  background-size: 10px 10px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

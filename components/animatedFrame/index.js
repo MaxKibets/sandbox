@@ -1,3 +1,1 @@
-import AnimatedFrame from "./AnimatedFrame";
-
-export default AnimatedFrame;
+export { default } from "./AnimatedFrame";
