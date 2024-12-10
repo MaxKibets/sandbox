@@ -1,7 +1,8 @@
+// Description: This file contains the canvas utility functions.
+
 // Select a canvas element
 const canvas = document.querySelector("");
 
-// Get the canvas context
 const saveBlob = (function () {
   const a = document.createElement("a");
   document.body.appendChild(a);
