@@ -81,6 +81,6 @@ a {
   width: 100%;
   max-width: 900px;
   margin: auto;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: var(--box-shadow);
 }

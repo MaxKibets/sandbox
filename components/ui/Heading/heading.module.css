@@ -1,0 +1,35 @@
+.heading {
+  font-weight: 300;
+  color: inherit;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--background-light);
+  padding-bottom: 1rem;
+}
+
+.medium {
+  margin-bottom: 1rem;
+}
+
+.heading:last-child {
+  margin-bottom: 0;
+}
+
+.inverse {
+  color: var(--foreground);
+}
+
+.h1 {
+  font-size: 1.4rem;
+}
+
+.h2 {
+  font-size: 1.2rem;
+}
+
+.h3 {
+  font-size: 1rem;
+}
+
+.h4 {
+  font-size: .8rem;
+}
