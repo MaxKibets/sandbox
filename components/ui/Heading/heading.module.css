@@ -1,7 +1,7 @@
 .heading {
   font-weight: 300;
   color: inherit;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border-bottom: 1px solid var(--background-light);
   padding-bottom: 1rem;
 }

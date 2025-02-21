@@ -12,6 +12,7 @@ import Logo from "../ui/Logo";
 const LINKS = [
   { name: "Carousel", slug: "carousel" },
   { name: "Virtualization", slug: "virtualization" },
+  { name: "AbortController API", slug: "abort-controller" },
 ];
 
 const MainNavBarItem: FC<MainNavBarItemProps> = ({ name, slug }) => {
